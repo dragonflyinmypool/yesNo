@@ -13,10 +13,21 @@ function generate() {
 	return word
 }
 
+let currentId = 1;
+
 function display() {
 	let answer = generate();
+	
 	document.getElementById('display').innerText = '';
 	document.getElementById('display').innerText = answer;
+
+	if (currentId == 1) {
+		document.getElementById("display").id = "display2";
+		currentId = 2;
+	} else {
+		document.getElementById("display").id = "display";
+		currentId = 1;
+	}
 
 }
 
