@@ -7,18 +7,21 @@ body {
 }
 
 #container {
+	padding-top:40px;
 	display: grid;
 	justify-content: center;
-	grid-gap: 20px;
+	grid-gap: 60px;
+	margin: auto;
 }
 
 #display {
 	border: 1px solid lightblue;
-	height: 100px;
 	color: lightblue;
-	font-size: 50px;
-	line-height: 100px;
+	height: 200px;
+	font-size: 200px;
+	line-height: 200px;
 	border-radius: 10px;
+	width: 325px;
 }
 
 button {
@@ -29,4 +32,9 @@ button {
 	border-radius: 5px;
 	width: 150px;
 	background-color: lightgreen;
+}
+
+button:active {
+	background-color: green;
+	color: white;
 }

@@ -15,7 +15,8 @@ function generate() {
 
 function display() {
 	let answer = generate();
-	document.getElementById('display').innerText = answer
+	document.getElementById('display').innerText = '';
+	document.getElementById('display').innerText = answer;
 
 }
 
