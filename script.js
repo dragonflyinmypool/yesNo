@@ -13,10 +13,30 @@ function generate() {
 	return word
 }
 
-
+let toggle = 1;
 
 function display() {
 	let answer = generate();
-	document.getElementById('display').innerText = answer;
+
+	if (toggle) {
+
+		let x = document.getElementsByClassName("display1");
+		x[0].innerText = answer;
+		x[0].classList.add("display2");
+		x[0].classList.remove("display1");
+		
+		toggle = 0;
+
+	} else {
+
+		let x = document.getElementsByClassName("display2");
+		x[0].innerText = answer;
+		x[0].classList.add("display1");
+		x[0].classList.remove("display2");
+		
+
+		toggle = 1;
+
+	}
 }
 
