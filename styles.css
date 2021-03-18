@@ -6,6 +6,12 @@ body {
 	text-align: center;
 }
 
+h2 {
+	position: relative;
+	animation-name: header;
+  animation-duration: 3s;
+}
+
 #container {
 	padding-top:40px;
 	display: grid;
@@ -22,16 +28,7 @@ body {
 	line-height: 200px;
 	border-radius: 10px;
 	width: 325px;
-}
-
-#display2 {
-	border: 1px solid lightblue;
-	color: red;
-	height: 200px;
-	font-size: 200px;
-	line-height: 200px;
-	border-radius: 10px;
-	width: 325px;
+  transition: all 2s;
 }
 
 button {
@@ -42,12 +39,18 @@ button {
 	border-radius: 5px;
 	width: 150px;
 	background-color: lightgreen;
-	transition: background-color 1s ease-out;
-	transition: color 1s ease-out;
+	animation-name: button;
+  animation-duration: 3s;
 
 }
 
-button:active {
-	background-color: green;
-	color: white;
+/* Animations */
+@keyframes button {
+  from {background-color: black}
+  to {background-color: lightgreen}
+}
+
+@keyframes header {
+  from {top:-100px;}
+  to {top:0px;}
 }
