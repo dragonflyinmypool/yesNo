@@ -20,33 +20,22 @@ h2 {
 	margin: auto;
 }
 
-.display1 {
+.display {
 	border: 1px solid lightblue;
-	color: lightblue;
+	color: black;
 	height: 200px;
 	font-size: 200px;
 	line-height: 200px;
 	border-radius: 10px;
 	width: 325px;
-  animation-name: display;
-  animation-duration: 3s;
+ }
 
-  transition: color 1s;
 
+.animate {
+	animation-name: display;
+  animation-duration: 5s;
 }
 
-.display2 {
-	border: 1px solid lightblue;
-	color: blue;
-	height: 200px;
-	font-size: 200px;
-	line-height: 200px;
-	border-radius: 10px;
-	width: 325px;
-
-  animation-name: display;
-  animation-duration: 3s;
-}
 
 button {
 	border:0px;
@@ -58,8 +47,9 @@ button {
 	background-color: lightgreen;
 	animation-name: button;
   animation-duration: 3s;
-
 }
+
+
 
 /* Animations */
 @keyframes header {
@@ -68,8 +58,8 @@ button {
 }
 
 @keyframes display {
-  from {background-color: grey}
-  to {background-color: black}
+  from {color: black}
+  to {color: lightblue}
 }
 
 @keyframes button {
