@@ -42,14 +42,14 @@ function display() {
 	mySound.play()
 
 	let answer = generate();
-	
+
 	let x = document.getElementsByClassName('display');
 	x[0].innerText = answer;
 	x[0].classList.remove('animate');
 	
 	setTimeout(function () {
   	x[0].classList.add('animate');
-	}, 10);
+	}, 100);
 
 }
 
