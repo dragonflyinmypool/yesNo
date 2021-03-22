@@ -1,6 +1,5 @@
 
 
-
 // Generate Yes or No
 function generate() {
 	
@@ -16,31 +15,16 @@ function generate() {
 }
 
 
-// Add sound
-function sound(src) {
-  this.sound = document.createElement("audio");
-  this.sound.src = src;
-  this.sound.setAttribute("preload", "auto");
-  this.sound.setAttribute("controls", "none");
-  this.sound.style.display = "none";
-  document.body.appendChild(this.sound);
-  this.play = function(){
-    this.sound.play();
-  }
-  this.stop = function(){
-    this.sound.pause();
-  }
-}
+// Load sound
+var sound2 = new Howl({
+    src: ['ding.mp3']
+  });
 
 
-// Apply Yes or No to display box and animate
-var clickSound;
-mySound = new sound("ding.mp3");
-
-
+// Animate, create actions
 function display() {
-	mySound.play()
-
+	// mySound.play();
+	sound2.play();
 	let answer = generate();
 
 	let x = document.getElementsByClassName('display');
@@ -52,4 +36,3 @@ function display() {
 	}, 100);
 
 }
-
